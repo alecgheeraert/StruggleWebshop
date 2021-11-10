@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Roboto Mono" !important;
+    background: #0f0f0f !important;
+    color: #e7e7e7 !important;
+}
+
+/* GRID layouts */
+
+.grid-container {      /* Main grid container for mobile */
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 80px auto 80px auto 80px; 
+    grid-template-areas: 
+    ". . ."
+    ". image ."
+    ". . ."
+    ". specs ."
+    ". . .";
+}
+
+@media screen and (min-width: 738px) {
+    .grid-container {      /* Main grid container for pc */
+        display: grid;
+        grid-template-columns: 10% 35% 10% 35% 10%;
+        grid-template-rows: 80px 80px auto 80px; 
+        grid-template-areas: 
+        ". . . . ."
+        ". . . . ."
+        ". image . specs ."
+        ". . . . .";
+    }
+}
+
+.grid-item-image {      /* Main grid image item */
+    grid-area: image;
+}
+
+.grid-item-image img {  /* Main grid image item image */
+    width: 100%;
+}
+
+.grid-item-specs {    /* Main grid content item */
+    grid-area: specs;
+    place-self: center;
+}
+
+
+
+/* CONTENT style */
+
+#specific-name {
+    font-family: "Roboto Mono";
+    font-size: 36px;
+}
+
+#price {
+    padding: 16px 0;
+    font-size: 16px;
+}
+
+.grid-item-specs input {
+    width: 130px;
+}
+
+
+/* INPUT style */
+
+/* All input tags */
+input {                         
+    font-family: "Larsseit";
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 4px;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+
+/* All Label Tags For Radio */
+.input-radio {                  
+    position: relative;
+    display: inline-block;
+    font-family: "Larsseit";
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-top: 8px;
+    padding-left: 18px;
+}
+
+.input-radio:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #999999;
+}
+
+/* All Radio Tags */
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label:before {
+    background: #e7e7e7;
+    border: 1px solid #e7e7e7;
+}
+
+.input-amount {
+    color: #e7e7e7;
+    background-color: #292929 !important;
+    size: 16px;
+    margin-top: 24px;
+    padding: 3px;
+    border: #292929 0px solid;
+}
+
+.add-specific {
+    margin-top: 30px;
+}
+
+.add-specific input {
+    padding: 20px 40px 20px 40px;
+    font-size: 16px;
+    background-color: #292929;
+    color: #e7e7e7;
+    text-decoration: none;
+    width: 100%;
+    border: #292929 solid 0px;
+}
+
+.add-specific input:hover {
+    text-decoration: none;
+}

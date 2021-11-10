@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Roboto Mono" !important;
+    background: #0f0f0f !important;
+    color: #e7e7e7 !important;
+}
+
+/* GRID layouts */
+.grid-container {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 50px auto auto 30px 30px 20px 20px 100px;
+    grid-template-areas: 
+    ". head ."
+    ". ecart ."
+    ". loop ."
+    ". . ."
+    ". tcart ."
+    ". . ."
+    ". order ."
+    ". . .";
+}
+
+@media screen and (min-width: 738px) {
+    .grid-container {
+        padding-top: 100px;
+        display: grid;
+        grid-template-columns: 20% 1fr 5% 1fr 5% 20%;
+        grid-template-rows: 50px auto 100px 20px 20px 100px;
+        grid-template-areas: 
+        ". head . . . ."
+        ". loop loop loop loop ."
+        ". . . tcart tcart ."
+        ". ecart ecart ecart ecart ."
+        ". . order order order ."
+        ". . . . . .";
+    }
+}
+
+.grid-item-head { 
+    grid-area: head; 
+}
+.grid-item-order {
+    grid-area: order;
+    align-self: end; 
+    justify-self: end;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.grid-item-order a {
+    text-decoration: none;
+    color: #e7e7e7; 
+    border: solid 1px #e7e7e7;
+    padding: 5px;
+}
+.grid-item-ecart { 
+    grid-area: ecart;
+    justify-self: center;
+    align-self: center;
+}
+.grid-item-ecart a {
+    text-decoration: none;
+    color: #e7e7e7;
+}
+.grid-item-place { 
+    grid-area: place; 
+}
+.grid-item-loop { 
+    grid-area: loop; 
+}
+.grid-item-tcart { 
+    grid-area: tcart; 
+    align-self: end; 
+    justify-self: end;
+}
+
+/* Spec grid */
+.spec-grid-container {
+    display: grid;
+    grid-template-columns: 120px 1fr 70px 30px 30px;
+    grid-template-rows: auto 30px 30px 30px;
+    grid-template-areas: 
+    "image image image image image"
+    "name  . amount plus minus"
+    "size  . color color color"
+    "empty . total total total";
+    padding: 7px;
+    border: solid 1px #e7e7e7;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.image img{
+    width: 100%;
+}
+
+@media screen and (min-width: 738px) {
+    .spec-grid-container {
+        display: grid;
+        grid-template-columns: 120px 1fr 70px 70px;
+        grid-template-rows: 30px 30px 30px 20px;
+        grid-template-areas: 
+        "image name amount amount"
+        "image size plus minus"
+        "image color total total"
+        "image empty total total";
+        padding: 7px;
+        border: solid 1px #e7e7e7;
+        overflow: hidden;
+        font-size: 16px;
+    }
+
+    .image img{
+        height: 110px;
+        width: 110px;
+    } 
+    .name {
+        justify-self: start;
+    }
+    .size {
+        justify-self: start;
+    }
+    .color {
+        justify-self: start;
+        overflow: visible;
+    }
+    .empty {
+        justify-self: start;
+    }
+}
+
+.name { 
+    grid-area: name; 
+}
+.size { 
+    grid-area: size; 
+    font-weight: lighter;
+}
+.price { 
+    grid-area: price;
+}
+.amount { 
+    grid-area: amount;
+    align-self: center;
+    justify-self: start;
+    font-weight: lighter;
+}
+
+.add { 
+    grid-area: plus;
+    align-self: center;
+    justify-self: end;
+    padding-right: 4px;
+}
+.remove { 
+    grid-area: minus;
+    align-self: center;
+    justify-self: start;
+    padding-left: 4px;
+} 
+
+.total { 
+    grid-area: total;
+    align-self: center;
+    justify-self: start;
+    font-weight: lighter;
+}
+
+.add a { 
+    text-decoration: none;
+    color: #e7e7e7;
+    font-size: 27px;
+    font-weight: lighter;
+}
+.remove a {
+    text-decoration: none;
+    color: #e7e7e7;
+    font-size: 27px;
+    font-weight: lighter;
+}
+.empty { 
+    grid-area: empty; 
+    text-decoration: none;
+    align-self: center;
+    color: #e7e7e7;
+    font-weight: lighter;
+    font-size: 11px;
+}
+.empty a { 
+    text-decoration: none;
+    color: #e7e7e7;
+}
+.image {
+    grid-area: image;
+}
+.color {
+    grid-area: color;
+    font-weight: lighter;
+}

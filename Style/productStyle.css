@@ -1,0 +1,73 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Roboto Mono" !important;
+    background: #0f0f0f !important;
+    color: #e7e7e7 !important;
+}
+
+/* GRID layouts */
+
+.grid-container {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 40px auto 40px; 
+    grid-template-areas: 
+    ". . ."
+    ". prod ."
+    ". . .";
+}
+
+
+
+/* Start Grid Item Products */
+/* GRID */
+.grid-item-prod {    
+    grid-area: prod;
+    background-color: #0f0f0f;
+}
+
+.grid-container-cat  {
+    display: grid;
+    grid-template-rows: 120px;
+    align-items: flex-end;
+}
+
+.grid-container-loop {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media screen and (min-width: 738px) {
+    .grid-container-loop {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.spec-grid-container {
+    display: grid;
+    grid-template-columns: 1% 1fr 1%;
+    grid-template-rows: 20px 24px 5px auto 24px;
+    grid-template-areas: 
+    ". . ."
+    ". price ."
+    ". . ."
+    ". image ."
+    ". name .";
+}
+
+.price { grid-area: price; }
+.a { grid-area: image; }
+.name { grid-area: name; }
+
+/* Content */
+.a img{
+    max-width: 100%;
+}
+/* End Grid Item Products */

@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Roboto Mono" !important;
+    background: #0f0f0f !important;
+    color: #e7e7e7 !important;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 4% 1fr 4%;
+    grid-template-rows: 160px 200px auto auto 400px 100px;
+    grid-template-areas: 
+    ". . ."
+    ". disclamer ."
+    ". item ."
+    ". error ."
+    ". home ."
+    ". . .";
+}
+
+@media screen and (min-width: 738px) { 
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 160px auto auto 100px;
+        grid-template-areas: 
+        ". . ."
+        "disclamer item error"
+        ". home ."
+        ". . .";
+    }
+}
+
+.grid-item {
+    grid-area: item;
+    justify-self: center;
+    overflow: hidden;
+}
+
+.grid-item-error {
+    grid-area: error;
+    justify-self: center;
+    overflow: hidden;
+}
+
+.grid-item-home {
+    grid-area: home;
+    justify-self: center;
+    overflow: hidden;
+}
+
+.grid-item-disclamer {
+    grid-area: disclamer;
+    justify-self: center;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: normal;
+    padding-bottom: 16px;
+}
+
+.error_reg .error_log{
+    font-size: 16px;
+    font-weight: lighter;
+    padding-bottom: 4px;
+}
+
+input {
+    margin: 10px 0px 5px 0px;
+    width: 200px;
+    padding: 2px;
+}
+
+input[type="submit"] {
+    background-color: #292929;
+    padding: 10px;
+    border: 1px #292929 solid;
+    color: #e7e7e7;
+}
+
+p {
+    text-align: center;
+    padding: 20px 0px;
+    width: 200px;
+}
+
+p a {
+    text-decoration: none;
+    color: #e7e7e7;
+}
+
+.grid-item-home {
+    margin-top: 150px;
+    padding: 4px 16px;
+    border: solid 1px #e7e7e7;
+}
+
+.grid-item-home a {
+    text-decoration: none;
+    color: #e7e7e7; 
+    font-size: 21px;
+}
+
+.grid-item-disclamer p {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.faq {
+    font-size: 15px;
+    font-weight: lighter;
+}

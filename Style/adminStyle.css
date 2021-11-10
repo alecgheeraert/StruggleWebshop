@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Roboto Mono" !important;
+    background: #0f0f0f !important;
+    color: #e7e7e7 !important;
+}
+
+a {
+    color: #e7e7e7;
+    text-decoration: none;
+}
+
+.container {
+    padding: 120px 20px 0px 20px;
+}
+
+td {
+    text-align: center;
+}
+
+td input {
+    color: #ffffff;
+    background-color: #0f0f0f;
+    text-align: center;
+    border: #e7e7e7;
+    border-style: dashed;
+    border-width: 1px;
+}

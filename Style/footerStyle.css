@@ -1,0 +1,98 @@
+.grid-container-footer {
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 20px auto 15px auto 15px auto 15px auto 15px auto 50px;
+    grid-template-areas: 
+    ". . ."
+    ". help ."
+    ". . ."
+    ". line ."
+    ". . ."
+    ". copy ."
+    ". . ."
+    ". find ."
+    ". . ."
+    ". cont ."
+    ". . .";
+}
+
+.grid-container-footer p{
+    color: gray;
+    font-weight: lighter;
+    font-size: 16px;
+    text-align: center;
+}
+
+.grid-container-footer h4 {
+    font-weight: 100;
+    font-size: 16px;
+    color: #e7e7e7 !important;
+    text-align: center;
+}
+
+.grid-item-help {
+    grid-area: help;
+    justify-self: center;
+}
+
+.grid-item-line {
+    grid-area: line;
+    border-bottom: 1px solid grey;
+}
+
+.grid-item-copy {
+    grid-area: copy;
+    justify-self: center;
+
+}
+
+.grid-item-find {
+    grid-area: find;
+    justify-self: center;
+}
+
+.grid-item-cont {
+    grid-area: cont;
+    justify-self: center;
+}
+
+@media screen and (min-width: 738px) {
+    .grid-container-footer {
+        display: grid;
+        grid-template-columns: 10% 1fr 1fr 1fr 10%;
+        grid-template-rows: 20px auto 20px auto 20px auto 70px;
+        grid-template-areas: 
+        ". . . . ."
+        ". . . help ."
+        ". . . . ."
+        ". line line line ."
+        ". . . . ."
+        ". copy find cont ."
+        ". . . . .";
+    }
+    
+    .grid-item-help {
+        grid-area: help;
+        justify-self: end;
+    }
+    
+    .grid-item-line {
+        grid-area: line;
+        border-bottom: 1px solid grey;
+    }
+    
+    .grid-item-copy {
+        grid-area: copy;
+        justify-self: start;
+    }
+    
+    .grid-item-find {
+        grid-area: find;
+        justify-self: center;
+    }
+    
+    .grid-item-cont {
+        grid-area: cont;
+        justify-self: end;
+    }
+}

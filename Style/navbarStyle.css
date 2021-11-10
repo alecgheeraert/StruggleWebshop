@@ -1,0 +1,129 @@
+/* ------- Navigation Bar Style ------- */
+/* ------- Basic Style ------- */
+@viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+}
+
+/* ------- Navigation Style ------- */
+#contentNavigation {                     /* All the content */
+    padding: 10px 20px;                     /* Padding of all content */
+    transition: margin-right 0.7s;          /* Time to close the slidebar */
+    overflow: hidden;                       /* No overflow from content */
+    width: 100%;                            /* Width content can use */
+    background: #0f0f0f;                  /* Background color of navbar */
+    height: 80px;                           /* Height of navbar */  
+    position: fixed;
+    z-index: 7;
+}
+
+/* -- Large screens -- */
+#standardNavigation {                    /* Navigation on large screens */
+    float: left;                            /* Standard floating on the left */
+    position: fixed;
+    /*height: 80px;*/
+}
+
+#standardNavigation #brand {
+    float: left;
+    display: block;
+    margin-left: 52px;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+#standardNavigation a {                  /* The links and logo on standard */
+    text-decoration: none;                  /* No decoration on links */
+    color: #e7e7e7;                       /* Color of links */
+}
+
+#standardMenu{
+    float: left;
+    right: 60px;
+    position: fixed;
+}
+
+#standardMenu a {
+    padding-left: 60px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 120;
+    line-height: 80px;
+    position: relative;
+}
+
+#standardMenu p {
+    color: white;
+    padding-left: 40px;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 120;
+    line-height: 80px;
+    position: relative;
+}
+
+.adminDropdown {
+    display: inline-block;
+    line-height: 80px;
+    position: relative;
+
+}
+
+@media screen and (max-width: 737px) {  /* When screen size is less then 767px */
+    #standardMenu {                         /* Then standard menu */
+        visibility: hidden !important;      /* Becomes hidden */
+    }
+}
+
+/* -- Small screens -- */
+@media screen and (min-width: 738px) {  /* When screen size is at least 768px */
+    #resizeNavigation {                     /* Then resize menu*/
+        visibility: hidden !important;      /* Becomes hidden */
+    }
+}
+
+.slideNavigation {                       /* The full slidebar */
+    height: 100%;                           /* Height of slidebar that slides out */
+    width: 0;                               /* Width of slidebar when not in use */
+    position: fixed;                        /* Position is fixed while scrolling */
+    z-index: 2;                             /* Places the links on top of backgroundcolor */
+    top: 0;                                 /* Space between top of page and slidebar */
+    right: 0;                               /* Space between left of page and slidebar */
+    background-color:  #0f0f0f;           /* Color of the background */
+    opacity: 1;                             /* Gives the background a tone */
+    overflow-x: hidden;                     /* Links won't overflow horizontally */
+    padding-top: 60px;                      /* Height between top of slidebar and links */
+    transition: 0.7s;                       /* Transition speed for slide of slidebar */
+}
+
+.slideNavigation a {                     /* All the hyperlinks */
+    display: block;                         /* Dispay vertically */
+    padding: 20px 30px;                     /* Padding between text and sides */
+    font-size: 18px;                        /* Size of font */
+    text-decoration: none;                  /* Blue lines gone */
+    color: #CCC;                          /* Text color */
+}
+
+.slideNavigation a:hover {               /* Hovering over the hyperlinks */
+    color: #e7e7e7;                       /* Text color when hovering over it */
+    transition: 0.4s;                       /* Transition for the color change when hovoring */
+}
+
+.slideNavigation .closeSlide {           /* Closing icon */
+    position: absolute;                     /* Absolute placement for close icon */
+    top: 8px;                                 /* Height between top and close icon */
+    font-size: 24px;                        /* Size of close icon */
+    left: 180px;                            /* Space between right and close icon */
+}
+
+.openSlide a {                           /* Open icon */
+    color: #e7e7e7;                       /* Color of open icon */
+    font-size: 24px;                        /* Size of open icon */
+    right: 60px;                            /* Space between right and open icon */
+    position: absolute;                     /* Absolute placement for open icon */
+    padding-top: 18px;                      /* Padding between top and open */
+}
+
+.openSlide a:hover {
+    color: #e7e7e7;
+}
